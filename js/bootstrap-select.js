@@ -1808,7 +1808,8 @@
     },
 
     buildList: function (size, searching) {
-      searching = false;
+      console.log(this.selectpicker.search.data);
+      console.log(this.selectpicker.main.data);
       
       var that = this,
           selectData = searching ? this.selectpicker.search.data : this.selectpicker.main.data,
@@ -1899,12 +1900,14 @@
         } else {
           Array.prototype.push.apply(this.selectpicker.main.elements, mainElements);
           this.selectpicker.current.elements = this.selectpicker.main.elements;
+          console.log(this.selectpicker.main.elements);
         }
       } else {
         if (searching) {
           this.selectpicker.search.elements = mainElements;
         } else {
           this.selectpicker.main.elements = this.selectpicker.current.elements = mainElements;
+          console.log(this.selectpicker.main.elements);
         }
       }
     },
