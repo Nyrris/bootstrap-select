@@ -1808,6 +1808,8 @@
     },
 
     buildList: function (size, searching) {
+      searching = false;
+      
       var that = this,
           selectData = searching ? this.selectpicker.search.data : this.selectpicker.main.data,
           mainElements = [],
@@ -1884,6 +1886,7 @@
 
       var startIndex = size || 0;
 
+      console.log(selectData);
       for (var len = selectData.length, i = startIndex; i < len; i++) {
         var item = selectData[i];
 
