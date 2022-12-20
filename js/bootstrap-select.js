@@ -1687,7 +1687,6 @@
             optID: config.optID
           });
         } else {
-          console.log(config);
           var liIndex = mainData.length + startLen,
               cssText = dataGetter(item, 'style'),
               inlineStyle = cssText ? htmlEscape(cssText) : '',
@@ -1723,8 +1722,8 @@
             }
           }
 
-          console.log(mainData);
           mainData.push(config);
+          console.log(mainData);
         }
       }
 
@@ -1806,6 +1805,7 @@
         }
       }
 
+      console.log(mainData);
       return mainData;
     },
 
@@ -1889,7 +1889,6 @@
 
       var startIndex = size || 0;
 
-      console.log(selectData);
       for (var len = selectData.length, i = startIndex; i < len; i++) {
         var item = selectData[i];
 
@@ -1902,14 +1901,14 @@
         } else {
           Array.prototype.push.apply(this.selectpicker.main.elements, mainElements);
           this.selectpicker.current.elements = this.selectpicker.main.elements;
-          console.log(this.selectpicker.main.elements);
+          console.log("1904", this.selectpicker.main.elements);
         }
       } else {
         if (searching) {
           this.selectpicker.search.elements = mainElements;
         } else {
           this.selectpicker.main.elements = this.selectpicker.current.elements = mainElements;
-          console.log(this.selectpicker.main.elements);
+          console.log("1911", this.selectpicker.main.elements);
         }
       }
     },
