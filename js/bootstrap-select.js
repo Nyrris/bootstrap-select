@@ -1607,6 +1607,7 @@
     },
 
     fetchData: function (callback, type, page, searchValue) {
+      this.selectpicker.main.data = [];
       page = page || 1;
       type = type || 'data';
 
@@ -3422,10 +3423,10 @@
 
     refresh: function () {
       console.log("refresh" ,this.selectpicker.main.data);
-      if (this.selectpicker.main.data.length >0 && typeof this.options.source.data === undefined) {
-        console.log("hack");
-        this.options.source.data = this.selectpicker.main.data;
-      }
+      //if (this.selectpicker.main.data.length >0 && typeof this.options.source.data === undefined) {
+      //  console.log("hack");
+      //  this.options.source.data = this.selectpicker.main.data;
+      //}
       
       var that = this;
       // update options if data attributes have been changed
