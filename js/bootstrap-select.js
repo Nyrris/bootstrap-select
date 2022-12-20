@@ -3421,11 +3421,13 @@
     },
 
     refresh: function () {
+      console.log("refresh" ,this.selectpicker.main.data);
       var that = this;
       // update options if data attributes have been changed
       var config = $.extend({}, this.options, getAttributesObject(this.$element), this.$element.data()); // in this order on refresh, as user may change attributes on select, and options object is not passed on refresh
       this.options = config;
 
+      console.log(this.options.source.data);
       if (this.options.source.data) {
         this.render();
         this.buildList();
