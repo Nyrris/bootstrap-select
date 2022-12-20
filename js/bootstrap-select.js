@@ -1687,6 +1687,7 @@
             optID: config.optID
           });
         } else {
+          console.log(config);
           var liIndex = mainData.length + startLen,
               cssText = dataGetter(item, 'style'),
               inlineStyle = cssText ? htmlEscape(cssText) : '',
@@ -1722,6 +1723,7 @@
             }
           }
 
+          console.log(mainData);
           mainData.push(config);
         }
       }
