@@ -1596,6 +1596,7 @@
     },
 
     fetchData: function (callback, type, page, searchValue) {
+      this.selectpicker.main.data = []; //Hack because this.options.source.data is undefined (so fetch data will add new data to excisting)
       page = page || 1;
       type = type || 'data';
 
